@@ -4,9 +4,11 @@ const input = document.getElementById("txt-style");
 const output =document.getElementById("output-box");
 
 const url = "https://api.funtranslations.com/translate/minion.json";
+const encrypt_url= encodeURI(url);
+console.log(encrypt_url)
 
 function getdata(datain){
-    return url + "?" + "text=" + datain;
+    return encrypt_url + "?" + "text=" + datain;
     
 }
 function handelerror(error)
